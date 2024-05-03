@@ -23,7 +23,7 @@ export default function Home() {
           </p>
 
           <div className='py-5'>
-            I'm a web dev who mostly works in FrontEnd developement and occasionally Backend. Im always up for a challenge, Lets connect!
+            I{"'"}m a web dev who mostly works in FrontEnd developement and occasionally Backend. Im always up for a challenge, Lets connect!
           </div>
 
           <nav className='pt-20'>
