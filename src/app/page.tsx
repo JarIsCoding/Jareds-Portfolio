@@ -1,4 +1,5 @@
 'use client'
+
 import useMousePosition from './utils/useMousePosition'
 
 export default function Home() {
@@ -11,9 +12,9 @@ export default function Home() {
       {/* Radial Graident for spotlight */}
       <div className="absolute inset-0 z-10" style={{ background: `radial-gradient(circle at ${x}px ${y}px, rgba(29, 78, 216, 0.15) 0%, transparent 80%)` }}></div>
 
-      <div className="flex justify-between gap-4 z-20 mx-40 relative h-screen overflow-y-auto scrollbar">
+      <div className="lg:flex lg:justify-between gap-4 z-20 mx-40 relative h-screen overflow-y-auto scrollbar">
 
-        <div className='text-start sticky w-1/2 top-0 pt-28'>
+        <div className='text-start lg:sticky lg:w-1/2 top-0 pt-28'>
 
           <p className='text-white text-[50px] font-bold leading-snug'>
             Jared Ly
@@ -22,35 +23,44 @@ export default function Home() {
             Web Developer / Fullstack Developer
           </p>
 
-          <div className='py-5'>
+          <div className='py-5 w-3/4'>
             I{"'"}m a web dev who mostly works in FrontEnd developement and occasionally Backend. Im always up for a challenge, Lets connect!
           </div>
 
           <nav className='pt-20'>
             <ul>
+              <link rel="stylesheet" href="#about" />
               <a href="#about">
                 <li className='active:text-white'>About</li>
               </a>
-              <a href="#ex">
-                <li className='active:text-white'>Expierence</li>
+              <a href="#certifs">
+                <li className='active:text-white'>Certificates</li>
               </a>
-              <a href="#proj">
+              <a href="#projects">
                 <li className='active:text-white'>Projects & Other</li>
               </a>
             </ul>
           </nav>
 
+          <div className='flex justify-between w-[60px] pt-20'>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-6 w-6" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
+
+          </div>
         </div>
 
-        <div className='w-1/2'>
+        <div className='lg:w-1/2'>
 
-          <div id='about' className='mt-28'>
+          <div id='about' className='pt-28'>
+            <p className='text-[20px] text-white font-bold'>
+              About Me!
+            </p>
             Hey there! I{"'"}m Jared Ly, a junior-level web developer with a passion for crafting immersive online experiences with websites.
             Ever since I wrote my first line of code, I{"'"}ve been captivated by the endless possibilities of web development.
             I thrive on the creative challenge of turning ideas into dynamic, user-friendly websites.
             <br />
             <br />
-            My journey into web development began with a curiosity-driven dive into HTML and CSS, and sence I decided to join the Codestack academy I{"'"}ve continually expanded my skills across various technologies and frameworks.
+            My journey into web development began with a curiosity-driven dive into HTML and CSS, and since I decided to join the Codestack academy I{"'"}ve continually expanded my skills across various technologies and frameworks.
             From building responsive layouts to integrating complex functionalities, I{"'"}m committed to mastering the tools of the trade to deliver top-notch solutions.
             <br />
             <br />
@@ -65,22 +75,118 @@ export default function Home() {
 
           <br />
 
-          <div id='ex' className=''>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptatem ut exercitationem modi sed dignissimos ex natus alias placeat magni. Libero autem nisi nostrum. Inventore mollitia consectetur labore distinctio sit.
-            Aliquam vel sed autem eligendi distinctio dolorem voluptatum aspernatur earum quos perspiciatis consequuntur, iure corporis odit impedit, dolores, ab quasi reprehenderit eaque recusandae nisi labore commodi magnam veritatis nam? Nostrum.
-            Quibusdam error fugit atque earum cum maiores ipsa voluptas temporibus est perferendis voluptatibus saepe aliquam accusamus esse ut dolorum possimus et, aperiam, optio aut omnis debitis? Porro vel animi quaerat!
-            Non quod perferendis assumenda nam iure nesciunt numquam optio enim sunt sit doloremque, placeat et magnam! Ratione modi veritatis aliquam reiciendis consectetur officia, voluptas nesciunt cum vel assumenda sequi inventore.
-            Aut, velit ab explicabo blanditiis voluptate dolorem expedita reiciendis. Nam ab incidunt repellendus nihil excepturi accusamus ut, quibusdam sit vel aliquid ullam odio, esse architecto, quas eveniet? Eligendi, consequuntur sunt!
-            Dolorum odit porro libero itaque voluptas natus id ipsum iste aut praesentium qui nam quidem similique magnam illo tenetur doloremque non, tempora eligendi! Ex ut ullam rem earum voluptatibus nesciunt.
-            Recusandae praesentium ipsam debitis neque fugiat qui vitae porro. Nesciunt aut excepturi sapiente modi ad quos temporibus alias quisquam eius vel earum hic nulla quo, consequatur ex, quia, quod inventore!
-            Et perspiciatis deserunt, possimus repellendus, est sint, veniam neque magni dicta vel hic. Est ad fugit ut nulla aliquam quidem recusandae, animi minus iusto aut earum dolorum voluptatem reprehenderit rem.
-            Expedita veritatis id recusandae vitae, asperiores, enim nam quae eius nemo saepe, necessitatibus amet? Maiores ipsum modi facere necessitatibus iure architecto sed, illum natus similique culpa molestias voluptatum, itaque dicta.
-            Unde provident cupiditate laudantium. Perspiciatis quo mollitia at aperiam libero quis tenetur corrupti culpa? Quod dolorum est culpa, molestias dolores, aliquam explicabo doloremque iusto id distinctio neque numquam, expedita aspernatur.
+          <div id='certifs' className=''>
+            <p className='text-[20px] text-white font-bold'>
+              My Certificates
+            </p>
+            <p>
+              Here are some of my <span className='text-white'>certificates</span> that I{"'"}ve obtained, Check them out!
+            </p>
+            <div className='grid col-span-1 py-5'>
+              <div className='flex justify-between'>
+                <div>
+                  <p className='text-white font-bold'>
+                    CodeAcademy
+                  </p>
+                  <a href=""><p className='text-white'>- Learn C#</p></a>
+                  <a href=""><p className='text-white'>- Learn HTML</p></a>
+                  <a href=""><p className='text-white'>- Learn CSS</p></a>
+                  <a href=""><p className='text-white'>- Learn JavaScript</p></a>
+                  <a href=""><p className='text-white'>- Learn Intermediate JavaScript</p></a>
+                  <a href=""><p className='text-white'>- Learn React JavaScript</p></a>
+                  <a href=""><p className='text-white'>- Learn TypeScript</p></a>
+                </div>
+
+                <div className='text-end'>
+                  <p className='text-white font-bold'>
+                    Cisco
+                  </p>
+                  <a href=""><p className='text-white'>Learn Computer Repair -</p></a>
+                  <a href=""><p className='text-white'>Learn Cyber Security -</p></a>
+                  <a href=""><p className='text-white'>Learn  -</p></a>
+                </div>
+
+              </div>
+            </div>
           </div>
 
-          <div id='proj' className=''>
-            links here
+          <div id='projects' className=''>
+            <p className='text-[20px] text-white font-bold'>
+              My Projects
+            </p>
+            <div className='ps-3 py-5'>
+              
+              <div className='py-4'>
+                <p className='text-white'>
+                  Weather App
+                </p>
+                <div>
+                  A simple weather app that uses the OpenWeatherMap API to get current and forecast data.
+                </div>
+                <div className='flex justify-start gap-3'>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>ReactJS</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Api</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                </div>
+              </div>
+
+              <div className='py-4'>
+                <p className='text-white'>
+                  Weather App
+                </p>
+                <div>
+                  A simple weather app that uses the OpenWeatherMap API to get current and forecast data.
+                </div>
+                <div className='flex justify-start gap-3'>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>ReactJS</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Api</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                </div>
+              </div>
+
+              <div className='py-4'>
+                <p className='text-white'>
+                  Weather App
+                </p>
+                <div>
+                  A simple weather app that uses the OpenWeatherMap API to get current and forecast data.
+                </div>
+                <div className='flex justify-start gap-3'>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>ReactJS</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Api</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                </div>
+              </div>
+
+              <div className='py-4'>
+                <p className='text-white'>
+                  Weather App
+                </p>
+                <div>
+                  A simple weather app that uses the OpenWeatherMap API to get current and forecast data.
+                </div>
+                <div className='flex justify-start gap-3'>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>ReactJS</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Api</div>
+                  <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              Wanna see all of my projects? Check out my <a href="https://github.com/JarIsCoding"><span className='text-white font-bold'>Github</span></a>!
+            </p>
+
           </div>
+
         </div>
       </div>
     </div>
