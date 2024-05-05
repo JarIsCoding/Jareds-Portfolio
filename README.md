@@ -1,2 +1,4 @@
+Jared Ly
 My Current Portfolio
-Work in progress as of 5/3/2024
+Work in progress as of 5/5/2024
+Created in Next.js, styled in Tailwind, and deployed on vercel
