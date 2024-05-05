@@ -103,7 +103,7 @@ export default function Home() {
             <p className='text-[20px] text-white font-bold'>
               Skills
             </p>
-            <p>
+            <p className='ps-3'>
               Some of my skills include, HTML, CSS, Javascript, Unity, ReactJS, Typescript, Angular, NextJS, Tailwind, Figma, Vercel, Azure Webservices, Bootstrap, Flowbite, and Github Repo.
             </p>
           </div>
