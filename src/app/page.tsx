@@ -1,7 +1,24 @@
 'use client'
 
 import useMousePosition from './utils/useMousePosition'
-import smc from '@/app/assets/Certifs/SMCpage.png'
+import Image from 'next/image';
+import smc from '@/app/assets/SMCpage.png'
+import poke from '@/app/assets/PokePic.png'
+import port from '@/app/assets/PortfolioPic.png'
+import tip from '@/app/assets/TipCalcPic.png'
+import angular from '@/app/assets/angular.png'
+import azure from '@/app/assets/azure.png'
+import bootstrap from '@/app/assets/bootstrap.png'
+import css from '@/app/assets/css.png'
+import figma from '@/app/assets/figma.png'
+import github from '@/app/assets/github.png'
+import html from '@/app/assets/html.png'
+import js from '@/app/assets/javascript.png'
+import next from '@/app/assets/next.png'
+import react from '@/app/assets/react.png'
+import tail from '@/app/assets/tail.png'
+import typescript from '@/app/assets/typescript.png'
+import unity from '@/app/assets/unity.png'
 
 export default function Home() {
 
@@ -13,7 +30,7 @@ export default function Home() {
       {/* Radial Graident for spotlight */}
       <div className="absolute inset-0 z-10" style={{ background: `radial-gradient(circle at ${x}px ${y}px, rgba(29, 78, 216, 0.15) 0%, transparent 80%)` }}></div>
 
-      <div className="lg:flex lg:justify-between gap-4 z-20 lg:mx-40 mx-10 relative h-screen overflow-y-auto scrollbar">
+      <div className="lg:flex lg:justify-between gap-4 z-20 lg:ms-40 lg:me-28 mx-10 relative h-screen overflow-y-auto scrollbar">
 
         <div className='text-start lg:sticky lg:w-1/2 top-0 pt-28'>
 
@@ -78,8 +95,8 @@ export default function Home() {
               About Me!
             </p>
             <div className='ps-3'>
-              Hey there! I{"'"}m Jared Ly, a junior-level web developer with a passion for crafting immersive online experiences with websites.
-              Ever since I wrote my first line of code, I{"'"}ve been captivated by the endless possibilities of web development.
+              Hey there! I{"'"}m Jared Ly, a passionate web developer that crafts immersive online experiences with websites.
+              Through our my journey, I{"'"}ve been captivated by the endless possibilities of web development.
               I thrive on the creative challenge of turning ideas into dynamic, user-friendly websites.
               <br />
               <br />
@@ -103,9 +120,128 @@ export default function Home() {
             <p className='text-[20px] text-white font-bold'>
               Skills
             </p>
-            <p className='ps-3'>
-              Some of my skills include, HTML, CSS, Javascript, Unity, ReactJS, Typescript, Angular, NextJS, Tailwind, Figma, Vercel, Azure Webservices, Bootstrap, Flowbite, and Github Repo.
-            </p>
+            <div className='grid grid-cols-6'>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={azure} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  Azure
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={bootstrap} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  Bootstrap
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={css} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  CSS
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={figma} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  Figma
+                </p>
+              </div>
+              
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={github} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  Github Pull/Push
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={html} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  Html
+                </p>
+              </div>
+
+
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={js} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  JavaScript
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={next} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  NextJS
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={react} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  ReactJS
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={tail} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  Tailwind CSS
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={typescript} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  TypeScript
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={unity} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  Unity
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={angular} width='45' alt='' />
+                </div>
+                <p className='text-center'>
+                  Angular
+                </p>
+              </div>
+
+            </div>
           </div>
 
           <div id='certifs' className='pt-8'>
@@ -143,10 +279,10 @@ export default function Home() {
               </div>
 
               <a href="https://publuu.com/flip-book/493281/1107445" className='pt-3 font-bold'>
-                  <div>
-                    More information in my <span className='text-white'>resume.</span>
-                  </div>
-                </a>
+                <div>
+                  More information in my <span className='text-white'>resume.</span>
+                </div>
+              </a>
             </div>
           </div>
 
@@ -156,79 +292,96 @@ export default function Home() {
             </p>
             <div className='ps-3'>
 
-              <a href="https://github.com/JarIsCoding/weather-app-remake" target='_blank'>
-                <div className='py-4'>
-                  <p className='text-white'>
-                    Weather App
-                  </p>
-                  <div>
-                    A simple weather app that uses the OpenWeatherMap API to get current and forecast data.
+              <a href="https://j-ly-tip-calculator.vercel.app/" target='_blank'>
+                <div className='flex justify-between items-center py-4'>
+                  <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
+                    <Image src={tip} alt="" />
                   </div>
-                  <div className='flex justify-start gap-3 py-3'>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>NextJS</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Api</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                  <div className='ps-2 w-2/3'>
+                    <p className='text-white'>
+                      Tip Calcuator
+                    </p>
+                    <div>
+                      A simple calcuator that outputs a tip amount for each person based on the cost and amount of people.
+                    </div>
+                    <div className='flex justify-start gap-3 py-3 overflow-x-auto scrollbar'>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>NextJS</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Api</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                    </div>
                   </div>
                 </div>
               </a>
 
               <a href="https://pokemontype.vercel.app/" target='_blank'>
-                <div className='py-4'>
-                  <p className='text-white'>
-                    Pokemon API
-                  </p>
-                  <div>
-                    A project using the Pokemon API V2, which provides a wide range of information about various pokemon.
+                <div className='flex justify-between items-center py-4'>
+                  <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
+                    <Image src={poke} alt="" />
                   </div>
-                  <div className='flex justify-start gap-3 py-3'>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>ReactJS</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Pokemon Api V2</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                  <div className='ps-2 w-2/3'>
+                    <p className='text-white'>
+                      Pokemon API
+                    </p>
+                    <div>
+                      A project using the Pokemon API V2, which provides a wide range of information about various pokemon.
+                    </div>
+                    <div className='flex justify-start gap-3 py-3 overflow-x-auto scrollbar'>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>ReactJS</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>PokemonApiV2</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                    </div>
                   </div>
                 </div>
               </a>
 
-              <a href="https://jareds-portfolio-three.vercel.app/" target='_blank'>
-                <div className='py-4'>
-                  <p className='text-white'>
-                    Portfolio Website
-                  </p>
-                  <div>
-                    My personal portfolio made with next.js and Tailwind. Shows everything from my projects and other cool stuff about me.
+              <a href="https://jareds-portfolio-three.vercel.app/">
+                <div className='flex justify-between items-center py-4'>
+                  <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
+                    <Image src={port} alt="" />
                   </div>
-                  <div className='flex justify-start gap-3 py-3'>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>NextJS</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Portfolio</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                  <div className='ps-2 w-2/3'>
+                    <p className='text-white'>
+                      Portfolio Website
+                    </p>
+                    <div>
+                      My personal portfolio made with next.js and Tailwind. Shows everything from my projects and other cool stuff about me.
+                    </div>
+                    <div className='flex justify-start gap-3 py-3 overflow-x-auto scrollbar'>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>NextJS</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Portfolio</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                    </div>
                   </div>
                 </div>
               </a>
 
               <a href="https://jar-jen-steamymugcafe.vercel.app/" target='_blank'>
-                <div className='py-4'>
-                  <p className='text-white'>
-                    Steamy Mug Cafe
-                  </p>
-                  <div>
-                    A website made for my friends and I, based on a coffee API. Designed in figma and created for fun.
+                <div className='flex justify-evenly items-center py-4'>
+                  <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
+                    <Image src={smc} alt="" />
                   </div>
-                  <div className='flex justify-start gap-3 py-3'>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>JavaScript</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>HTML</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>CSS</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Api</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
-                    <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>WIP</div>
+                  <div className='ps-2 w-2/3'>
+                    <p className='text-white'>
+                      Steamy Mug Cafe
+                    </p>
+                    <div>
+                      A website made for my friends and I, based on a coffee API. Designed in figma and created for fun.
+                    </div>
+                    <div className='flex justify-start gap-3 py-3 overflow-x-auto scrollbar'>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>JavaScript</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>HTML</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>CSS</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Api</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>WIP</div>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <img src='../app/assets/Certifs/SMCpage.png' alt="" />
                 </div>
               </a>
 
