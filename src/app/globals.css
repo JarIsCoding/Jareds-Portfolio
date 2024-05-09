@@ -17,10 +17,49 @@ body{
   display: none;
 }
 
-body{
+html {
   scroll-behavior: smooth;
 }
 
 .active {
   color: white;
+}
+
+.rotateHover:hover
+  {
+    position: relative;
+    margin: auto;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 2px solid rgb(94, 234, 212);
+        border-radius: 10px;
+        transition: all .5s;
+        animation: clippath 3s infinite linear;
+    }
+}
+
+@keyframes clippath {
+    0%,
+    100% {
+        clip-path: inset(0 0 95% 0);
+        border-color: rgb(123, 241, 224);
+    }
+    25% {
+        clip-path: inset(0 95% 0 0);
+        border-color: rgb(172, 215, 208);
+    }
+    50% {
+        clip-path: inset(95% 0 0 0);
+        border-color: rgb(202, 210, 209);
+    }
+    75% {
+        clip-path: inset(0 0 0 95%);
+        border-color: rgb(86, 234, 212);
+    }
 }

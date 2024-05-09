@@ -45,11 +45,14 @@ export default function Home() {
             I{"'"}m a web dev who mostly works in FrontEnd developement and occasionally Backend. Im always up for a challenge, Lets connect!
           </div>
 
-          <nav className='pt-20'>
+          <nav className='py-16'>
             <ul className='text-white font-[20px]'>
               <link rel="stylesheet" href="#about" />
               <a href="#about">
                 <li className='active:text-white'>About</li>
+              </a>
+              <a href="#skills">
+              <li className='active:text-white'>Skills</li>
               </a>
               <a href="#certifs">
                 <li className='active:text-white'>Certificates</li>
@@ -60,13 +63,13 @@ export default function Home() {
             </ul>
           </nav>
 
-          <div className='pt-20 w-1/2'>
+          <div className=' w-1/2'>
             <div>
               <p className='text-white font-bold'>
                 Email
               </p>
-              <a href="Jaredlybusiness@gmail.com">
-                <p>
+              <a href="mailto:jaredlybusiness@gmail.com">
+                <p className='underline'>
                   Jaredlybusiness@gmail.com
                 </p>
               </a>
@@ -176,8 +179,6 @@ export default function Home() {
                 </p>
               </div>
 
-
-
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
                   <Image src={js} width='45' alt='' />
@@ -278,7 +279,7 @@ export default function Home() {
 
               </div>
 
-              <a href="https://publuu.com/flip-book/493281/1107445" className='pt-3 font-bold'>
+              <a href="https://publuu.com/flip-book/493281/1107445" target='_blank' className='pt-3 font-bold'>
                 <div>
                   More information in my <span className='text-white'>resume.</span>
                 </div>
@@ -290,10 +291,10 @@ export default function Home() {
             <p className='text-[20px] text-white font-bold'>
               My Projects
             </p>
-            <div className='ps-3'>
+            <div className=''>
 
-              <a href="https://j-ly-tip-calculator.vercel.app/" target='_blank'>
-                <div className='flex justify-between items-center py-4'>
+              <a href="https://j-ly-tip-calculator.vercel.app/" target='_blank' className='rotateHover'>
+                <div className='flex justify-between items-center py-4 px-2'>
                   <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
                     <Image src={tip} alt="" />
                   </div>
@@ -315,8 +316,8 @@ export default function Home() {
                 </div>
               </a>
 
-              <a href="https://pokemontype.vercel.app/" target='_blank'>
-                <div className='flex justify-between items-center py-4'>
+              <a href="https://pokemontype.vercel.app/" target='_blank' className='rotateHover'>
+                <div className='flex justify-between items-center py-4 px-2'>
                   <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
                     <Image src={poke} alt="" />
                   </div>
@@ -338,8 +339,8 @@ export default function Home() {
                 </div>
               </a>
 
-              <a href="https://jareds-portfolio-three.vercel.app/">
-                <div className='flex justify-between items-center py-4'>
+              <a href="https://jareds-portfolio-three.vercel.app/" className='rotateHover'>
+                <div className='flex justify-between items-center py-4 px-2'>
                   <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
                     <Image src={port} alt="" />
                   </div>
@@ -361,8 +362,8 @@ export default function Home() {
                 </div>
               </a>
 
-              <a href="https://jar-jen-steamymugcafe.vercel.app/" target='_blank'>
-                <div className='flex justify-evenly items-center py-4'>
+              <a href="https://jar-jen-steamymugcafe.vercel.app/" target='_blank' className='rotateHover'>
+                <div className='flex justify-evenly items-center py-4 px-2'>
                   <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
                     <Image src={smc} alt="" />
                   </div>
@@ -380,6 +381,7 @@ export default function Home() {
                       <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Api</div>
                       <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
                       <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>WIP</div>
+                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Bootstrap</div>
                     </div>
                   </div>
                 </div>
