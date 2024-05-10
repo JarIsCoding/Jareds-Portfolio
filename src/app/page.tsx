@@ -19,25 +19,38 @@ import react from '@/app/assets/react.png'
 import tail from '@/app/assets/tail.png'
 import typescript from '@/app/assets/typescript.png'
 import unity from '@/app/assets/unity.png'
+import moon from '@/app/assets/moon.png'
+import sun from '@/app/assets/sun.png'
+import resume from '@/app/assets/resume.png'
+import { useState } from 'react';
 
 export default function Home() {
 
   const { x, y } = useMousePosition()
+  const [theme, setTheme] = useState<boolean>(true)
 
   return (
-    <div className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 scroll-smooth">
+    <div className={`leading-relaxed antialiased selection:bg-teal-300 selection:text-teal-900 ${theme ? 'bg-slate-900 text-slate-400 ' : 'bg-[#FCF5E5] text-slate-500'}`}>
 
       {/* Radial Graident for spotlight */}
-      <div className="absolute inset-0 z-10" style={{ background: `radial-gradient(circle at ${x}px ${y}px, rgba(29, 78, 216, 0.15) 0%, transparent 80%)` }}></div>
+      <div className="absolute inset-0 z-10" style={{ background: `radial-gradient(circle at ${x}px ${y}px, rgba(${theme ? '29, 78, 216, 0.15' : '224, 212, 185, .7'}) 0%, transparent 80%)` }}></div>
+      <div className='absolute top-3 right-3 z-30'>
+        <div className={`${theme ? 'block' : 'hidden'}`} onClick={() => { setTheme(false); console.log('switch') }}>
+          <Image src={moon} alt="moon" width='50' />
+        </div>
+        <div className={`${theme ? 'hidden' : 'block'}`} onClick={() => setTheme(true)}>
+          <Image src={sun} alt="sun" width='50' />
+        </div>
+      </div>
 
-      <div className="lg:flex lg:justify-between gap-4 z-20 lg:ms-40 lg:me-28 mx-10 relative h-screen overflow-y-auto scrollbar">
+      <div className="lg:flex lg:justify-between gap-4 z-20 lg:ps-40 lg:pe-28 px-10 relative h-screen overflow-y-auto scrollbar">
 
         <div className='text-start lg:sticky lg:w-1/2 top-0 pt-28'>
 
-          <p className='text-white text-[50px] font-bold leading-snug'>
+          <p className={`text-[50px] font-bold leading-snug ${theme ? 'text-white' : 'text-black'}`}>
             Jared Ly
           </p>
-          <p className='text-white text-[25px] font-semibold'>
+          <p className={`text-[25px] font-semibold ${theme ? 'text-white' : 'text-black'}`}>
             Web Developer / Fullstack Developer
           </p>
 
@@ -45,56 +58,64 @@ export default function Home() {
             I{"'"}m a web dev who mostly works in FrontEnd developement and occasionally Backend. Im always up for a challenge, Lets connect!
           </div>
 
-          <nav className='py-16'>
-            <ul className='text-white font-[20px]'>
-              <link rel="stylesheet" href="#about" />
-              <a href="#about">
-                <li className='active:text-white'>About</li>
-              </a>
-              <a href="#skills">
-              <li className='active:text-white'>Skills</li>
-              </a>
-              <a href="#certifs">
-                <li className='active:text-white'>Certificates</li>
-              </a>
-              <a href="#projects">
-                <li className='active:text-white'>Projects & Other</li>
-              </a>
-            </ul>
-          </nav>
+          <div>
+            <nav className='py-16'>
+              <ul className={` font-[20px] ${theme ? 'text-white' : 'text-black'}`}>
+                <link rel="stylesheet" href="#about" />
+                <a href="#about">
+                  <li className='active:text-white'>About</li>
+                </a>
+                <a href="#skills">
+                  <li className='active:text-white'>Skills</li>
+                </a>
+                <a href="#certifs">
+                  <li className='active:text-white'>Certificates</li>
+                </a>
+                <a href="#projects">
+                  <li className='active:text-white'>Projects & Other</li>
+                </a>
+              </ul>
+            </nav>
 
-          <div className=' w-1/2'>
-            <div>
-              <p className='text-white font-bold'>
-                Email
-              </p>
-              <a href="mailto:jaredlybusiness@gmail.com">
-                <p className='underline'>
-                  Jaredlybusiness@gmail.com
+
+            <div className='w-1/2'>
+              <div>
+                <p className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>
+                  Email
                 </p>
+                <a href="mailto:jaredlybusiness@gmail.com">
+                  <p className='underline'>
+                    Jaredlybusiness@gmail.com
+                  </p>
+                </a>
+                <p className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>
+                  Phone
+                </p>
+                <p>
+                  (209) 598-0217
+                </p>
+              </div>
+            </div>
+
+            <div className='flex justify-between w-[100px] pt-6'>
+              <a href="https://github.com/JarIsCoding" target='_blank'>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-6 w-6" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
               </a>
-              <p className='text-white font-bold'>
-                Phone
-              </p>
-              <p>
-                (209) 598-0217
-              </p>
+              <a href="https://www.linkedin.com/in/jared-ly-6b2b272b9/" target='_blank' >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
+              </a>
+              <a href="https://publuu.com/flip-book/493281/1107445" target='_blank'>
+                <Image src={resume} alt="resume" width='24' />
+              </a>
             </div>
           </div>
-          <div className='flex justify-between w-[60px] pt-6'>
-            <a href="https://github.com/JarIsCoding" target='_blank'>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-6 w-6" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/jared-ly-6b2b272b9/" target='_blank' >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
-            </a>
-          </div>
+
         </div>
 
         <div className='lg:w-1/2'>
 
           <div id='about' className='pt-28'>
-            <p className='text-[20px] text-white font-bold'>
+            <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
               About Me!
             </p>
             <div className='ps-3'>
@@ -120,7 +141,7 @@ export default function Home() {
           <br />
 
           <div id='skills'>
-            <p className='text-[20px] text-white font-bold'>
+            <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
               Skills
             </p>
             <div className='grid grid-cols-6'>
@@ -160,7 +181,7 @@ export default function Home() {
                   Figma
                 </p>
               </div>
-              
+
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
                   <Image src={github} width='45' alt='' />
@@ -246,142 +267,142 @@ export default function Home() {
           </div>
 
           <div id='certifs' className='pt-8'>
-            <p className='text-[20px] text-white font-bold'>
+            <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
               My Certificates
             </p>
             <p>
-              Here are some of my <span className='text-white'>certificates</span> that I{"'"}ve obtained, Check them out!
+              Here are some of my <span className={`${theme ? 'text-white' : 'text-black'}`}>certificates</span> that I{"'"}ve obtained, Check them out!
             </p>
             {/* need to figure out how to put pdf links here */}
             <div className='grid col-span-1 py-5 ps-3'>
               <div className='flex justify-between'>
                 <div>
-                  <p className='text-white font-bold'>
+                  <p className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>
                     CodeAcademy
                   </p>
-                  <a href=""><p className='text-white'>- Learn C#</p></a>
-                  <a href=""><p className='text-white'>- Learn HTML</p></a>
-                  <a href=""><p className='text-white'>- Learn CSS</p></a>
-                  <a href=""><p className='text-white'>- Learn JavaScript</p></a>
-                  <a href=""><p className='text-white'>- Learn Intermediate JavaScript</p></a>
-                  <a href=""><p className='text-white'>- Learn React JavaScript</p></a>
-                  <a href=""><p className='text-white'>- Learn TypeScript</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn C#</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn HTML</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn CSS</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn JavaScript</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn Intermediate JavaScript</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn React JavaScript</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn TypeScript</p></a>
                 </div>
 
                 <div className='text-end'>
-                  <p className='text-white font-bold'>
+                  <p className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>
                     Cisco
                   </p>
-                  <a href=""><p className='text-white'>Learn Computer Repair -</p></a>
-                  <a href=""><p className='text-white'>Learn Cyber Security -</p></a>
-                  <a href=""><p className='text-white'>Learn  -</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>Learn Computer Repair -</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>Learn Cyber Security -</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>Learn  -</p></a>
                 </div>
 
               </div>
 
               <a href="https://publuu.com/flip-book/493281/1107445" target='_blank' className='pt-3 font-bold'>
                 <div>
-                  More information in my <span className='text-white'>resume.</span>
+                  More information in my <span className={`${theme ? 'text-white' : 'text-black'}`}>resume.</span>
                 </div>
               </a>
             </div>
           </div>
 
           <div id='projects' className=''>
-            <p className='text-[20px] text-white font-bold'>
+            <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
               My Projects
             </p>
             <div className=''>
 
-              <a href="https://j-ly-tip-calculator.vercel.app/" target='_blank' className='rotateHover'>
+              <a href="https://j-ly-tip-calculator.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
                 <div className='flex justify-between items-center py-4 px-2'>
-                  <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
+                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md w-1/3`}>
                     <Image src={tip} alt="" />
                   </div>
                   <div className='ps-2 w-2/3'>
-                    <p className='text-white'>
-                      Tip Calcuator
+                    <p className={`${theme ? 'text-white' : 'text-black'}`}>
+                      Tip Calculator
                     </p>
                     <div>
-                      A simple calcuator that outputs a tip amount for each person based on the cost and amount of people.
+                      A simple calculator that outputs a tip amount for each person based on the cost and amount of people.
                     </div>
                     <div className='flex justify-start gap-3 py-3 overflow-x-auto scrollbar'>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>NextJS</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Api</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                      <div className={`flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'}`}>NextJS</div>
+                      <div className={`flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'}`}>TypeScript</div>
+                      <div className={`flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'}`}>FrontEndMentor</div>
+                      <div className={`flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'}`}>CSS</div>
+                      <div className={`flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'}`}>Tailwind</div>
                     </div>
                   </div>
                 </div>
               </a>
 
-              <a href="https://pokemontype.vercel.app/" target='_blank' className='rotateHover'>
+              <a href="https://pokemontype.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
                 <div className='flex justify-between items-center py-4 px-2'>
-                  <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
+                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md w-1/3`}>
                     <Image src={poke} alt="" />
                   </div>
                   <div className='ps-2 w-2/3'>
-                    <p className='text-white'>
+                    <p className={`${theme ? 'text-white' : 'text-black'}`}>
                       Pokemon API
                     </p>
                     <div>
                       A project using the Pokemon API V2, which provides a wide range of information about various pokemon.
                     </div>
                     <div className='flex justify-start gap-3 py-3 overflow-x-auto scrollbar'>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>ReactJS</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>PokemonApiV2</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>ReactJS</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>TypeScript</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Figma</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>PokemonApiV2</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Tailwind</div>
                     </div>
                   </div>
                 </div>
               </a>
 
-              <a href="https://jareds-portfolio-three.vercel.app/" className='rotateHover'>
+              <a href="https://jareds-portfolio-three.vercel.app/" className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
                 <div className='flex justify-between items-center py-4 px-2'>
-                  <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
+                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md w-1/3`}>
                     <Image src={port} alt="" />
                   </div>
                   <div className='ps-2 w-2/3'>
-                    <p className='text-white'>
+                    <p className={`${theme ? 'text-white' : 'text-black'}`}>
                       Portfolio Website
                     </p>
                     <div>
                       My personal portfolio made with next.js and Tailwind. Shows everything from my projects and other cool stuff about me.
                     </div>
                     <div className='flex justify-start gap-3 py-3 overflow-x-auto scrollbar'>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>NextJS</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>TypeScript</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Portfolio</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Tailwind</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>NextJS</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>TypeScript</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Figma</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Portfolio</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Tailwind</div>
                     </div>
                   </div>
                 </div>
               </a>
 
-              <a href="https://jar-jen-steamymugcafe.vercel.app/" target='_blank' className='rotateHover'>
+              <a href="https://jar-jen-steamymugcafe.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
                 <div className='flex justify-evenly items-center py-4 px-2'>
-                  <div className='p-2 bg-teal-400/20 rounded-md w-1/3'>
+                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md w-1/3`}>
                     <Image src={smc} alt="" />
                   </div>
                   <div className='ps-2 w-2/3'>
-                    <p className='text-white'>
+                    <p className={`${theme ? 'text-white' : 'text-black'}`}>
                       Steamy Mug Cafe
                     </p>
                     <div>
-                      A website made for my friends and I, based on a coffee API. Designed in figma and created for fun.
+                      A website made for my friends and I, based on a coffee API. Designed in figma and created for fun. Still in Progress.
                     </div>
                     <div className='flex justify-start gap-3 py-3 overflow-x-auto scrollbar'>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>JavaScript</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>HTML</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>CSS</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Api</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Figma</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>WIP</div>
-                      <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300'>Bootstrap</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>JavaScript</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>HTML</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>CSS</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Api</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Figma</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>WIP</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Bootstrap</div>
                     </div>
                   </div>
                 </div>
@@ -389,8 +410,9 @@ export default function Home() {
 
             </div>
 
+
             <p className='pb-20'>
-              Wanna see all of my projects? Check out my <a href="https://github.com/JarIsCoding" target='_blank'><span className='text-white font-bold'>Github</span></a>!
+              Wanna see all of my projects? Check out my <a href="https://github.com/JarIsCoding" target='_blank'><span className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>Github</span></a>!
             </p>
 
             <div className='text-[12px] text-end pb-10'>
