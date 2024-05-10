@@ -22,12 +22,33 @@ import unity from '@/app/assets/unity.png'
 import moon from '@/app/assets/moon.png'
 import sun from '@/app/assets/sun.png'
 import resume from '@/app/assets/resume.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
 
   const { x, y } = useMousePosition()
   const [theme, setTheme] = useState<boolean>(true)
+  const [isMd, setIsMd] = useState<boolean>(false);
+
+  function isMdScreen(): boolean {
+    const mdScreenWidth = 768;
+  
+    return window.innerWidth >= mdScreenWidth;
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMd(isMdScreen());
+    }
+
+    setIsMd(isMdScreen());
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className={`leading-relaxed antialiased selection:bg-teal-300 selection:text-teal-900 ${theme ? 'bg-slate-900 text-slate-400 ' : 'bg-[#FCF5E5] text-slate-500'}`}>
@@ -43,9 +64,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="lg:flex lg:justify-between gap-4 z-20 lg:ps-40 lg:pe-28 px-10 relative h-screen overflow-y-auto scrollbar">
+      <div className="lg:flex lg:justify-between gap-4 z-20 lg:ps-40 lg:pe-28 sm:px-10 px-4 relative h-screen overflow-y-auto scrollbar">
 
-        <div className='text-start lg:sticky lg:w-1/2 top-0 pt-28'>
+        <div className='text-start lg:sticky lg:w-1/2 top-0 lg:pt-28 pt-14'>
 
           <p className={`text-[50px] font-bold leading-snug ${theme ? 'text-white' : 'text-black'}`}>
             Jared Ly
@@ -114,7 +135,7 @@ export default function Home() {
 
         <div className='lg:w-1/2'>
 
-          <div id='about' className='pt-28'>
+          <div id='about' className='lg:pt-28 pt-10'>
             <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
               About Me!
             </p>
@@ -144,11 +165,11 @@ export default function Home() {
             <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
               Skills
             </p>
-            <div className='grid grid-cols-6'>
+            <div className='grid sm:grid-cols-6 grid-cols-3'>
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={azure} width='45' alt='' />
+                  <Image src={azure} width='45' alt='Azure Web Services Logo' />
                 </div>
                 <p className='text-center'>
                   Azure
@@ -157,7 +178,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={bootstrap} width='45' alt='' />
+                  <Image src={bootstrap} width='45' alt='Bootstrap CSS Logo' />
                 </div>
                 <p className='text-center'>
                   Bootstrap
@@ -166,7 +187,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={css} width='45' alt='' />
+                  <Image src={css} width='45' alt='CSS Icon ' />
                 </div>
                 <p className='text-center'>
                   CSS
@@ -175,7 +196,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={figma} width='45' alt='' />
+                  <Image src={figma} width='45' alt='Figma Logo' />
                 </div>
                 <p className='text-center'>
                   Figma
@@ -184,7 +205,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={github} width='45' alt='' />
+                  <Image src={github} width='45' alt='Github Logo' />
                 </div>
                 <p className='text-center'>
                   Github Pull/Push
@@ -193,7 +214,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={html} width='45' alt='' />
+                  <Image src={html} width='45' alt='HTML Icon' />
                 </div>
                 <p className='text-center'>
                   Html
@@ -202,7 +223,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={js} width='45' alt='' />
+                  <Image src={js} width='45' alt='JavaScript Icon' />
                 </div>
                 <p className='text-center'>
                   JavaScript
@@ -211,7 +232,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={next} width='45' alt='' />
+                  <Image src={next} width='45' alt='Next JavaScript Icon' />
                 </div>
                 <p className='text-center'>
                   NextJS
@@ -220,7 +241,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={react} width='45' alt='' />
+                  <Image src={react} width='45' alt='React JavaScript Icon' />
                 </div>
                 <p className='text-center'>
                   ReactJS
@@ -229,7 +250,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={tail} width='45' alt='' />
+                  <Image src={tail} width='45' alt='Tailwind CSS Logo' />
                 </div>
                 <p className='text-center'>
                   Tailwind CSS
@@ -238,7 +259,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={typescript} width='45' alt='' />
+                  <Image src={typescript} width='45' alt='Typescript Icon' />
                 </div>
                 <p className='text-center'>
                   TypeScript
@@ -247,7 +268,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={unity} width='45' alt='' />
+                  <Image src={unity} width='45' alt='Unity Logo' />
                 </div>
                 <p className='text-center'>
                   Unity
@@ -256,7 +277,7 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={angular} width='45' alt='' />
+                  <Image src={angular} width='45' alt='Angular Icon' />
                 </div>
                 <p className='text-center'>
                   Angular
@@ -275,7 +296,7 @@ export default function Home() {
             </p>
             {/* need to figure out how to put pdf links here */}
             <div className='grid col-span-1 py-5 ps-3'>
-              <div className='flex justify-between'>
+              <div className='md:flex md:justify-between'>
                 <div>
                   <p className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>
                     CodeAcademy
@@ -289,13 +310,13 @@ export default function Home() {
                   <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn TypeScript</p></a>
                 </div>
 
-                <div className='text-end'>
+                <div className='md:text-end md:pt-0 pt-5'>
                   <p className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>
                     Cisco
                   </p>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>Learn Computer Repair -</p></a>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>Learn Cyber Security -</p></a>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>Learn  -</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd? 'Learn Computer Repair -' : '- Learn Computer Repair'}</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd? 'Learn Cyber Security -' : '- Learn Cyber Security'}</p></a>
+                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd? 'Learn -' : '- Learn'}</p></a>
                 </div>
 
               </div>
@@ -315,11 +336,11 @@ export default function Home() {
             <div className=''>
 
               <a href="https://j-ly-tip-calculator.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
-                <div className='flex justify-between items-center py-4 px-2'>
-                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md w-1/3`}>
-                    <Image src={tip} alt="" />
+                <div className='sm:flex sm:justify-between items-center py-4 px-2'>
+                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md sm:w-1/3`}>
+                    <Image src={tip} alt="Tip Calculator" />
                   </div>
-                  <div className='ps-2 w-2/3'>
+                  <div className='ps-2 sm:w-2/3'>
                     <p className={`${theme ? 'text-white' : 'text-black'}`}>
                       Tip Calculator
                     </p>
@@ -338,11 +359,11 @@ export default function Home() {
               </a>
 
               <a href="https://pokemontype.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
-                <div className='flex justify-between items-center py-4 px-2'>
-                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md w-1/3`}>
-                    <Image src={poke} alt="" />
+                <div className='sm:flex sm:justify-between items-center py-4 px-2'>
+                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md sm:w-1/3`}>
+                    <Image src={poke} alt="Pokemon Api Website" />
                   </div>
-                  <div className='ps-2 w-2/3'>
+                  <div className='ps-2 sm:w-2/3'>
                     <p className={`${theme ? 'text-white' : 'text-black'}`}>
                       Pokemon API
                     </p>
@@ -361,11 +382,11 @@ export default function Home() {
               </a>
 
               <a href="https://jareds-portfolio-three.vercel.app/" className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
-                <div className='flex justify-between items-center py-4 px-2'>
-                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md w-1/3`}>
-                    <Image src={port} alt="" />
+                <div className='sm:flex sm:justify-between items-center py-4 px-2'>
+                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md sm:w-1/3`}>
+                    <Image src={port} alt="My Portfolio" />
                   </div>
-                  <div className='ps-2 w-2/3'>
+                  <div className='ps-2 sm:w-2/3'>
                     <p className={`${theme ? 'text-white' : 'text-black'}`}>
                       Portfolio Website
                     </p>
@@ -384,11 +405,11 @@ export default function Home() {
               </a>
 
               <a href="https://jar-jen-steamymugcafe.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
-                <div className='flex justify-evenly items-center py-4 px-2'>
-                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md w-1/3`}>
-                    <Image src={smc} alt="" />
+                <div className='sm:flex sm:justify-evenly items-center py-4 px-2'>
+                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md sm:w-1/3`}>
+                    <Image src={smc} alt="Steamy Mug Cafe" />
                   </div>
-                  <div className='ps-2 w-2/3'>
+                  <div className='ps-2 sm:w-2/3'>
                     <p className={`${theme ? 'text-white' : 'text-black'}`}>
                       Steamy Mug Cafe
                     </p>
