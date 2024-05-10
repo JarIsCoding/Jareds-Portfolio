@@ -4,7 +4,7 @@ import useMousePosition from './utils/useMousePosition'
 import Image from 'next/image';
 import smc from '@/app/assets/SMCpage.png'
 import poke from '@/app/assets/PokePic.png'
-import port from '@/app/assets/PortfolioPic.png'
+import short from '@/app/assets/ShortTalkPng.png'
 import tip from '@/app/assets/TipCalcPic.png'
 import angular from '@/app/assets/angular.png'
 import azure from '@/app/assets/azure.png'
@@ -64,23 +64,23 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="lg:flex lg:justify-between gap-4 z-20 lg:ps-40 lg:pe-28 sm:px-10 px-4 relative h-screen overflow-y-auto scrollbar">
+      <div className="lg:flex lg:justify-between gap-2 z-20 lg:ps-20 lg:pe-20 sm:px-10 px-4 relative h-screen overflow-y-auto scrollbar">
 
-        <div className='text-start lg:sticky lg:w-1/2 top-0 lg:pt-28 pt-14'>
+        <div className='text-start lg:sticky lg:w-1/3 top-0 lg:pt-20 pt-14'>
 
           <p className={`text-[50px] font-bold leading-snug ${theme ? 'text-white' : 'text-black'}`}>
             Jared Ly
           </p>
-          <p className={`text-[25px] font-semibold ${theme ? 'text-white' : 'text-black'}`}>
+          <p className={`text-[20px] font-semibold ${theme ? 'text-white' : 'text-black'}`}>
             Web Developer / Fullstack Developer
           </p>
 
-          <div className='py-5 w-3/4'>
-            I{"'"}m a web dev who mostly works in FrontEnd developement and occasionally Backend. Im always up for a challenge, Lets connect!
+          <div className='py-5 pe-5'>
+            I{"'"}m a web dev who mostly works in FrontEnd developement and occasionally Backend. <br /> Im always up for a challenge, Lets connect!
           </div>
 
           <div>
-            <nav className='py-16'>
+            <nav className='py-20'>
               <ul className={` font-[20px] ${theme ? 'text-white' : 'text-black'}`}>
                 <link rel="stylesheet" href="#about" />
                 <a href="#about">
@@ -133,7 +133,7 @@ export default function Home() {
 
         </div>
 
-        <div className='lg:w-1/2'>
+        <div className='lg:w-2/3'>
 
           <div id='about' className='lg:pt-28 pt-10'>
             <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
@@ -167,21 +167,12 @@ export default function Home() {
             </p>
             <div className='grid sm:grid-cols-6 grid-cols-3'>
 
-              <div className='w-[85px]'>
+            <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={azure} width='45' alt='Azure Web Services Logo' />
+                  <Image src={html} width='45' alt='HTML Icon' />
                 </div>
                 <p className='text-center'>
-                  Azure
-                </p>
-              </div>
-
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={bootstrap} width='45' alt='Bootstrap CSS Logo' />
-                </div>
-                <p className='text-center'>
-                  Bootstrap
+                  Html
                 </p>
               </div>
 
@@ -196,28 +187,19 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={figma} width='45' alt='Figma Logo' />
+                  <Image src={bootstrap} width='45' alt='Bootstrap CSS Logo' />
                 </div>
                 <p className='text-center'>
-                  Figma
+                  Bootstrap
                 </p>
               </div>
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={github} width='45' alt='Github Logo' />
+                  <Image src={tail} width='45' alt='Tailwind CSS Logo' />
                 </div>
                 <p className='text-center'>
-                  Github Pull/Push
-                </p>
-              </div>
-
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={html} width='45' alt='HTML Icon' />
-                </div>
-                <p className='text-center'>
-                  Html
+                  Tailwind CSS
                 </p>
               </div>
 
@@ -227,6 +209,15 @@ export default function Home() {
                 </div>
                 <p className='text-center'>
                   JavaScript
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={typescript} width='45' alt='Typescript Icon' />
+                </div>
+                <p className='text-center'>
+                  TypeScript
                 </p>
               </div>
 
@@ -250,19 +241,28 @@ export default function Home() {
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={tail} width='45' alt='Tailwind CSS Logo' />
+                  <Image src={figma} width='45' alt='Figma Logo' />
                 </div>
                 <p className='text-center'>
-                  Tailwind CSS
+                  Figma
                 </p>
               </div>
 
               <div className='w-[85px]'>
                 <div className='flex justify-center'>
-                  <Image src={typescript} width='45' alt='Typescript Icon' />
+                  <Image src={azure} width='45' alt='Azure Web Services Logo' />
                 </div>
                 <p className='text-center'>
-                  TypeScript
+                  Azure
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={github} width='45' alt='Github Logo' />
+                </div>
+                <p className='text-center'>
+                  Github
                 </p>
               </div>
 
@@ -292,6 +292,31 @@ export default function Home() {
               My Projects
             </p>
             <div className=''>
+
+            <a href="https://jareds-portfolio-three.vercel.app/" className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
+                <div className='sm:flex sm:justify-between items-center py-4 px-2'>
+                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md sm:w-1/3`}>
+                    <Image src={short} alt="Short Talk Game" />
+                  </div>
+                  <div className='ps-2 sm:w-2/3'>
+                    <p className={`${theme ? 'text-white' : 'text-black'}`}>
+                      ShorTalk
+                    </p>
+                    <div>
+                      A fullstack group project, consisitng of JosephP, XavierH, and myself. Made in the Next.js framework based on the game Poetry for Neanderthals.
+
+                    </div>
+                    <div className='flex justify-start gap-3 py-3 overflow-x-auto scrollbar'>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>NextJS</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>TypeScript</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Figma</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>FullStack</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Tailwind</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>GroupProject</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
 
               <a href="https://j-ly-tip-calculator.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
                 <div className='sm:flex sm:justify-between items-center py-4 px-2'>
@@ -333,29 +358,6 @@ export default function Home() {
                       <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>TypeScript</div>
                       <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Figma</div>
                       <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>PokemonApiV2</div>
-                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Tailwind</div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <a href="https://jareds-portfolio-three.vercel.app/" className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
-                <div className='sm:flex sm:justify-between items-center py-4 px-2'>
-                  <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md sm:w-1/3`}>
-                    <Image src={port} alt="My Portfolio" />
-                  </div>
-                  <div className='ps-2 sm:w-2/3'>
-                    <p className={`${theme ? 'text-white' : 'text-black'}`}>
-                      Portfolio Website
-                    </p>
-                    <div>
-                      My personal portfolio made with next.js and Tailwind. Shows everything from my projects and other cool stuff about me.
-                    </div>
-                    <div className='flex justify-start gap-3 py-3 overflow-x-auto scrollbar'>
-                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>NextJS</div>
-                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>TypeScript</div>
-                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Figma</div>
-                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Portfolio</div>
                       <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Tailwind</div>
                     </div>
                   </div>
