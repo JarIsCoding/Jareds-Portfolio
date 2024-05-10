@@ -32,7 +32,7 @@ export default function Home() {
 
   function isMdScreen(): boolean {
     const mdScreenWidth = 768;
-  
+
     return window.innerWidth >= mdScreenWidth;
   }
 
@@ -287,49 +287,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div id='certifs' className='pt-8'>
-            <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
-              My Certificates
-            </p>
-            <p>
-              Here are some of my <span className={`${theme ? 'text-white' : 'text-black'}`}>certificates</span> that I{"'"}ve obtained, Check them out!
-            </p>
-            {/* need to figure out how to put pdf links here */}
-            <div className='grid col-span-1 py-5 ps-3'>
-              <div className='md:flex md:justify-between'>
-                <div>
-                  <p className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>
-                    CodeAcademy
-                  </p>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn C#</p></a>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn HTML</p></a>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn CSS</p></a>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn JavaScript</p></a>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn Intermediate JavaScript</p></a>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn React JavaScript</p></a>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn TypeScript</p></a>
-                </div>
-
-                <div className='md:text-end md:pt-0 pt-5'>
-                  <p className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>
-                    Cisco
-                  </p>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd? 'Learn Computer Repair -' : '- Learn Computer Repair'}</p></a>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd? 'Learn Cyber Security -' : '- Learn Cyber Security'}</p></a>
-                  <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd? 'Learn -' : '- Learn'}</p></a>
-                </div>
-
-              </div>
-
-              <a href="https://publuu.com/flip-book/493281/1107445" target='_blank' className='pt-3 font-bold'>
-                <div>
-                  More information in my <span className={`${theme ? 'text-white' : 'text-black'}`}>resume.</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div id='projects' className=''>
+          <div id='projects' className='pt-8'>
             <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
               My Projects
             </p>
@@ -430,11 +388,51 @@ export default function Home() {
               </a>
 
             </div>
-
-
-            <p className='pb-20'>
+            <p className=''>
               Wanna see all of my projects? Check out my <a href="https://github.com/JarIsCoding" target='_blank'><span className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>Github</span></a>!
             </p>
+
+            <div id='certifs' className='pt-8'>
+              <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
+                My Certificates
+              </p>
+              <p>
+                Here are some of my <span className={`${theme ? 'text-white' : 'text-black'}`}>certificates</span> that I{"'"}ve obtained, Check them out!
+              </p>
+              {/* need to figure out how to put pdf links here */}
+              <div className='grid col-span-1 py-5 ps-3'>
+                <div className='md:flex md:justify-between'>
+                  <div>
+                    <p className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>
+                      CodeAcademy
+                    </p>
+                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn C#</p></a>
+                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn HTML</p></a>
+                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn CSS</p></a>
+                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn JavaScript</p></a>
+                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn Intermediate JavaScript</p></a>
+                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn React JavaScript</p></a>
+                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn TypeScript</p></a>
+                  </div>
+
+                  <div className='md:text-end md:pt-0 pt-5'>
+                    <p className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>
+                      Cisco
+                    </p>
+                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd ? 'Learn Computer Repair -' : '- Learn Computer Repair'}</p></a>
+                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd ? 'Learn Cyber Security -' : '- Learn Cyber Security'}</p></a>
+                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd ? 'Learn -' : '- Learn'}</p></a>
+                  </div>
+
+                </div>
+
+                <a href="https://publuu.com/flip-book/493281/1107445" target='_blank' className='pt-3 font-bold'>
+                  <div>
+                    More information in my <span className={`${theme ? 'text-white' : 'text-black'}`}>resume.</span>
+                  </div>
+                </a>
+              </div>
+            </div>
 
             <div className='text-[12px] text-end pb-10'>
               Thanks for checking out my portfolio! - Jared Ly
