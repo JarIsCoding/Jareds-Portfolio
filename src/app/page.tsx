@@ -146,7 +146,7 @@ export default function Home() {
             </p>
             <div className='ps-3'>
               Hey there! I{"'"}m Jared Ly, a passionate web developer that crafts immersive online experiences with websites.
-              Through our my journey, I{"'"}ve been captivated by the endless possibilities of web development.
+              Through out my journey, I{"'"}ve been captivated by the endless possibilities of web development.
               I thrive on the creative challenge of turning ideas into dynamic, user-friendly websites.
               <br />
               <br />
@@ -155,12 +155,11 @@ export default function Home() {
               <br />
               <br />
               What excites me most about web development is its ever-evolving nature.
-              In this fast-paced industry, there{"'"}s always something new to learn, whether it{"'"}s mastering the latest JavaScript framework or staying updated on best practices for accessibility and performance optimization.
-              I embrace this continuous learning process as it fuels my growth as a developer.
+              In this fast-paced industry, there{"'"}s always something new to learn, whether it{"'"}s mastering the latest JavaScript framework or staying updated on best practices for accessibility and performance optimization, I embrace this continuous learning process as it fuels my growth as a developer.
               <br />
               <br />
               I{"'"}m excited about the opportunity to contribute my skills and enthusiasm to impactful projects and to continue evolving as a web developer.
-              Let{"'"}s connect and build something amazing together!
+              Let{"'"}s build something amazing together!
             </div>
           </div>
 
