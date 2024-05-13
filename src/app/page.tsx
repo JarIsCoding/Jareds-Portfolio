@@ -1,6 +1,7 @@
 'use client'
 
 import useMousePosition from './utils/useMousePosition'
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import smc from '@/app/assets/SMCpage.png'
 import poke from '@/app/assets/PokePic.png'
@@ -22,7 +23,11 @@ import unity from '@/app/assets/unity.png'
 import moon from '@/app/assets/moon.png'
 import sun from '@/app/assets/sun.png'
 import resume from '@/app/assets/resume.png'
-import { useEffect, useState } from 'react';
+import jira from '@/app/assets/jira.png'
+import notion from '@/app/assets/notion.png'
+import slack from '@/app/assets/slack.png'
+import vscode from '@/app/assets/vscode.png'
+
 
 export default function Home() {
 
@@ -199,7 +204,7 @@ export default function Home() {
                   <Image src={tail} width='45' alt='Tailwind CSS Logo' />
                 </div>
                 <p className='text-center'>
-                  Tailwind CSS
+                  TailwindCSS
                 </p>
               </div>
 
@@ -284,6 +289,42 @@ export default function Home() {
                 </p>
               </div>
 
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={slack} width='45' alt='Slack Logo' />
+                </div>
+                <p className='text-center'>
+                  Slack
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={notion} width='45' alt='Notion Logo' />
+                </div>
+                <p className='text-center'>
+                  Notion
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={jira} width='45' alt='Jira Logo' />
+                </div>
+                <p className='text-center'>
+                  Jira
+                </p>
+              </div>
+
+              <div className='w-[85px]'>
+                <div className='flex justify-center'>
+                  <Image src={vscode} width='45' alt='Visual Studio Code Logo' />
+                </div>
+                <p className='text-center'>
+                  VsCode
+                </p>
+              </div>
+
             </div>
           </div>
 
@@ -293,7 +334,7 @@ export default function Home() {
             </p>
             <div className=''>
 
-            <a href="https://jareds-portfolio-three.vercel.app/" className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
+            <a href="https://shortalk-front-end.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
                 <div className='sm:flex sm:justify-between items-center py-4 px-2'>
                   <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md sm:w-1/3`}>
                     <Image src={short} alt="Short Talk Game" />
