@@ -124,13 +124,13 @@ export default function Home() {
             </div>
 
             <div className='flex justify-between w-[100px] pt-6'>
-              <a href="https://github.com/JarIsCoding" target='_blank'>
+              <a href="https://github.com/JarIsCoding" target='_blank' aria-label='Read more about Github'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-6 w-6" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
               </a>
-              <a href="https://www.linkedin.com/in/jared-ly-6b2b272b9/" target='_blank' >
+              <a href="https://www.linkedin.com/in/jared-ly-6b2b272b9/" target='_blank' aria-label='Read more about LinkedIn'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
               </a>
-              <a href="https://publuu.com/flip-book/493281/1107445" target='_blank'>
+              <a href="https://publuu.com/flip-book/493281/1107445" target='_blank' aria-label='Read more about Resume'>
                 <Image src={resume} alt="resume" width='24' />
               </a>
             </div>
@@ -169,162 +169,184 @@ export default function Home() {
             <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
               Skills
             </p>
-            <div className='grid sm:grid-cols-6 grid-cols-3'>
+            <div className='grid grid-cols-2'>
 
-            <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={html} width='45' alt='HTML Icon' />
+              <div className=''>
+
+                {/* Start Langs */}
+                <div className='grid sm:grid-cols-5 grid-cols-3'>
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={html} width='45' alt='HTML Icon' />
+                    </div>
+                    <p className='text-center'>
+                      Html
+                    </p>
+                  </div>
+
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={css} width='45' alt='CSS Icon ' />
+                    </div>
+                    <p className='text-center'>
+                      CSS
+                    </p>
+                  </div>
+
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={js} width='45' alt='JavaScript Icon' />
+                    </div>
+                    <p className='text-center'>
+                      JavaScript
+                    </p>
+                  </div>
+
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={typescript} width='45' alt='Typescript Icon' />
+                    </div>
+                    <p className='text-center'>
+                      TypeScript
+                    </p>
+                  </div>
+
                 </div>
-                <p className='text-center'>
-                  Html
-                </p>
+
+                {/* Start Frameworks */}
+                <div className='grid sm:grid-cols-6 grid-cols-3'>
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={bootstrap} width='45' alt='Bootstrap CSS Logo' />
+                    </div>
+                    <p className='text-center'>
+                      Bootstrap
+                    </p>
+                  </div>
+
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={tail} width='45' alt='Tailwind CSS Logo' />
+                    </div>
+                    <p className='text-center'>
+                      TailwindCSS
+                    </p>
+                  </div>
+
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={next} width='45' alt='Next JavaScript Icon' />
+                    </div>
+                    <p className='text-center'>
+                      NextJS
+                    </p>
+                  </div>
+                </div>
+
               </div>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={css} width='45' alt='CSS Icon ' />
-                </div>
-                <p className='text-center'>
-                  CSS
-                </p>
-              </div>
+              <div className=''>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={bootstrap} width='45' alt='Bootstrap CSS Logo' />
-                </div>
-                <p className='text-center'>
-                  Bootstrap
-                </p>
-              </div>
+                {/* Start Productivity */}
+                <div className='grid sm:grid-cols-6 grid-cols-3'>
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={figma} width='45' alt='Figma Logo' />
+                    </div>
+                    <p className='text-center'>
+                      Figma
+                    </p>
+                  </div>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={tail} width='45' alt='Tailwind CSS Logo' />
-                </div>
-                <p className='text-center'>
-                  TailwindCSS
-                </p>
-              </div>
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={azure} width='45' alt='Azure Web Services Logo' />
+                    </div>
+                    <p className='text-center'>
+                      Azure
+                    </p>
+                  </div>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={js} width='45' alt='JavaScript Icon' />
-                </div>
-                <p className='text-center'>
-                  JavaScript
-                </p>
-              </div>
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={github} width='45' alt='Github Logo' />
+                    </div>
+                    <p className='text-center'>
+                      Github
+                    </p>
+                  </div>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={typescript} width='45' alt='Typescript Icon' />
-                </div>
-                <p className='text-center'>
-                  TypeScript
-                </p>
-              </div>
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={angular} width='45' alt='Angular Icon' />
+                    </div>
+                    <p className='text-center'>
+                      Angular
+                    </p>
+                  </div>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={next} width='45' alt='Next JavaScript Icon' />
-                </div>
-                <p className='text-center'>
-                  NextJS
-                </p>
-              </div>
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={slack} width='45' alt='Slack Logo' />
+                    </div>
+                    <p className='text-center'>
+                      Slack
+                    </p>
+                  </div>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={react} width='45' alt='React JavaScript Icon' />
-                </div>
-                <p className='text-center'>
-                  ReactJS
-                </p>
-              </div>
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={notion} width='45' alt='Notion Logo' />
+                    </div>
+                    <p className='text-center'>
+                      Notion
+                    </p>
+                  </div>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={figma} width='45' alt='Figma Logo' />
-                </div>
-                <p className='text-center'>
-                  Figma
-                </p>
-              </div>
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={jira} width='45' alt='Jira Logo' />
+                    </div>
+                    <p className='text-center'>
+                      Jira
+                    </p>
+                  </div>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={azure} width='45' alt='Azure Web Services Logo' />
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={vscode} width='45' alt='Visual Studio Code Logo' />
+                    </div>
+                    <p className='text-center'>
+                      VsCode
+                    </p>
+                  </div>
                 </div>
-                <p className='text-center'>
-                  Azure
-                </p>
-              </div>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={github} width='45' alt='Github Logo' />
-                </div>
-                <p className='text-center'>
-                  Github
-                </p>
-              </div>
+                {/* Start Libraries */}
+                <div className='grid sm:grid-cols-6 grid-cols-3'>
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={react} width='45' alt='React JavaScript Icon' />
+                    </div>
+                    <p className='text-center'>
+                      ReactJS
+                    </p>
+                  </div>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={unity} width='45' alt='Unity Logo' />
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={unity} width='45' alt='Unity Logo' />
+                    </div>
+                    <p className='text-center'>
+                      Unity
+                    </p>
+                  </div>
                 </div>
-                <p className='text-center'>
-                  Unity
-                </p>
-              </div>
 
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={angular} width='45' alt='Angular Icon' />
-                </div>
-                <p className='text-center'>
-                  Angular
-                </p>
-              </div>
-
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={slack} width='45' alt='Slack Logo' />
-                </div>
-                <p className='text-center'>
-                  Slack
-                </p>
-              </div>
-
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={notion} width='45' alt='Notion Logo' />
-                </div>
-                <p className='text-center'>
-                  Notion
-                </p>
-              </div>
-
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={jira} width='45' alt='Jira Logo' />
-                </div>
-                <p className='text-center'>
-                  Jira
-                </p>
-              </div>
-
-              <div className='w-[85px]'>
-                <div className='flex justify-center'>
-                  <Image src={vscode} width='45' alt='Visual Studio Code Logo' />
-                </div>
-                <p className='text-center'>
-                  VsCode
-                </p>
               </div>
 
             </div>
+
           </div>
 
           <div id='projects' className='pt-8'>
@@ -333,7 +355,7 @@ export default function Home() {
             </p>
             <div className=''>
 
-            <a href="https://shortalk-front-end.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
+              <a href="https://shortalk-front-end.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
                 <div className='sm:flex sm:justify-between items-center py-4 px-2'>
                   <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md sm:w-1/3`}>
                     <Image src={short} alt="Short Talk Game" />
