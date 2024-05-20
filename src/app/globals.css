@@ -17,8 +17,8 @@ body{
   display: none;
 }
 
-html {
-  scroll-behavior: smooth;
+*:focus-within , html:focus-within , body:focus-within {
+  scroll-behavior: smooth !important;
 }
 
 .active {

@@ -27,7 +27,7 @@ import jira from '@/app/assets/jira.png'
 import notion from '@/app/assets/notion.png'
 import slack from '@/app/assets/slack.png'
 import vscode from '@/app/assets/vscode.png'
-
+import swipe from '@/app/assets/swipe.png'
 
 export default function Home() {
 
@@ -86,23 +86,22 @@ export default function Home() {
 
           <div>
             <nav className='py-20'>
-              <ul className={` font-[20px] ${theme ? 'text-white' : 'text-black'}`}>
-                <link rel="stylesheet" href="#about" />
+              <ul className={`font-[20px] ${theme ? '' : 'text-black'}`}>
                 <a href="#about">
                   <li className='active:text-white'>About</li>
                 </a>
                 <a href="#skills">
                   <li className='active:text-white'>Skills</li>
+                </a>                
+                <a href="#projects">
+                  <li className='active:text-white'>Projects & Other</li>
                 </a>
                 <a href="#certifs">
                   <li className='active:text-white'>Certificates</li>
                 </a>
-                <a href="#projects">
-                  <li className='active:text-white'>Projects & Other</li>
-                </a>
+
               </ul>
             </nav>
-
 
             <div className='w-1/2'>
               <div>
@@ -174,7 +173,8 @@ export default function Home() {
               <div className=''>
 
                 {/* Start Langs */}
-                <div className='grid sm:grid-cols-5 grid-cols-3'>
+                <p className='text-white'>Languages</p>
+                <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
                       <Image src={html} width='45' alt='HTML Icon' />
@@ -214,7 +214,8 @@ export default function Home() {
                 </div>
 
                 {/* Start Frameworks */}
-                <div className='grid sm:grid-cols-6 grid-cols-3'>
+                <p className='text-white'>Frameworks</p>
+                <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
                       <Image src={bootstrap} width='45' alt='Bootstrap CSS Logo' />
@@ -248,7 +249,8 @@ export default function Home() {
               <div className=''>
 
                 {/* Start Productivity */}
-                <div className='grid sm:grid-cols-6 grid-cols-3'>
+                <p className='text-white'>Productivity</p>
+                <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
                       <Image src={figma} width='45' alt='Figma Logo' />
@@ -323,7 +325,8 @@ export default function Home() {
                 </div>
 
                 {/* Start Libraries */}
-                <div className='grid sm:grid-cols-6 grid-cols-3'>
+                <p className='text-white'>Libraries</p>
+                <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
                       <Image src={react} width='45' alt='React JavaScript Icon' />
@@ -341,6 +344,15 @@ export default function Home() {
                       Unity
                     </p>
                   </div>
+
+                  <div className='w-[85px]'>
+                    <div className='flex justify-center'>
+                      <Image src={swipe} width='45' alt='swiping image' />
+                    </div>
+                    <p className='text-center leading-tight pt-1'>
+                      React Swipeable
+                    </p>
+                  </div>
                 </div>
 
               </div>
@@ -349,7 +361,7 @@ export default function Home() {
 
           </div>
 
-          <div id='projects' className='pt-8'>
+          <div id='projects' className='pt-4'>
             <p className={`text-[20px] font-bold ${theme ? 'text-white' : 'text-black'}`}>
               My Projects
             </p>
@@ -485,7 +497,7 @@ export default function Home() {
                     </p>
                     <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd ? 'Learn Computer Repair -' : '- Learn Computer Repair'}</p></a>
                     <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd ? 'Learn Cyber Security -' : '- Learn Cyber Security'}</p></a>
-                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd ? 'Learn -' : '- Learn'}</p></a>
+                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>{isMd ? 'Learn IT Essentials -' : '- Learn IT Essentials'}</p></a>
                   </div>
 
                 </div>
