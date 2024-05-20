@@ -170,10 +170,10 @@ export default function Home() {
             </p>
             <div className='grid grid-cols-2'>
 
-              <div className=''>
+              <div className='ps-3'>
 
                 {/* Start Langs */}
-                <p className='text-white'>Languages</p>
+                <p className={`${theme ? 'text-white' : 'text-black'}`}>Languages</p>
                 <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
@@ -214,7 +214,7 @@ export default function Home() {
                 </div>
 
                 {/* Start Frameworks */}
-                <p className='text-white'>Frameworks</p>
+                <p className={`${theme ? 'text-white' : 'text-black'}`}>Frameworks</p>
                 <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
@@ -249,7 +249,7 @@ export default function Home() {
               <div className=''>
 
                 {/* Start Productivity */}
-                <p className='text-white'>Productivity</p>
+                <p className={`${theme ? 'text-white' : 'text-black'}`}>Productivity</p>
                 <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
@@ -325,7 +325,7 @@ export default function Home() {
                 </div>
 
                 {/* Start Libraries */}
-                <p className='text-white'>Libraries</p>
+                <p className={`${theme ? 'text-white' : 'text-black'}`}>Libraries</p>
                 <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
