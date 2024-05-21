@@ -117,7 +117,7 @@ export default function Home() {
                   Phone
                 </p>
                 <p>
-                  (209) 598-0217
+                (209) 800-4719
                 </p>
               </div>
             </div>
@@ -174,7 +174,7 @@ export default function Home() {
 
                 {/* Start Langs */}
                 <p className={`${theme ? 'text-white' : 'text-black'}`}>Languages</p>
-                <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
+                <div className='grid sm:grid-cols-4 grid-cols-2 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
                       <Image src={html} width='45' alt='HTML Icon' />
@@ -215,7 +215,7 @@ export default function Home() {
 
                 {/* Start Frameworks */}
                 <p className={`${theme ? 'text-white' : 'text-black'}`}>Frameworks</p>
-                <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
+                <div className='grid sm:grid-cols-4 grid-cols-2 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
                       <Image src={bootstrap} width='45' alt='Bootstrap CSS Logo' />
@@ -250,7 +250,7 @@ export default function Home() {
 
                 {/* Start Productivity */}
                 <p className={`${theme ? 'text-white' : 'text-black'}`}>Productivity</p>
-                <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
+                <div className='grid sm:grid-cols-4 grid-cols-2 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
                       <Image src={figma} width='45' alt='Figma Logo' />
@@ -326,7 +326,7 @@ export default function Home() {
 
                 {/* Start Libraries */}
                 <p className={`${theme ? 'text-white' : 'text-black'}`}>Libraries</p>
-                <div className='grid sm:grid-cols-4 grid-cols-3 pb-4'>
+                <div className='grid sm:grid-cols-4 grid-cols-2 pb-4'>
                   <div className='w-[85px]'>
                     <div className='flex justify-center'>
                       <Image src={react} width='45' alt='React JavaScript Icon' />
@@ -482,13 +482,13 @@ export default function Home() {
                     <p className={`font-bold ${theme ? 'text-white' : 'text-black'}`}>
                       CodeAcademy
                     </p>
-                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn C#</p></a>
-                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn HTML</p></a>
-                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn CSS</p></a>
-                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn JavaScript</p></a>
-                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn Intermediate JavaScript</p></a>
-                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn React JavaScript</p></a>
-                    <a href=""><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn TypeScript</p></a>
+                    <a href="./csharp.pdf"><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn C#</p></a>
+                    <a href="./html.pdf"><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn HTML</p></a>
+                    <a href="./css.pdf"><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn CSS</p></a>
+                    <a href="./js.pdf"><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn JavaScript</p></a>
+                    <a href="./interjs.pdf"><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn Intermediate JavaScript</p></a>
+                    <a href="./react2.pdf"><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn React JavaScript</p></a>
+                    <a href="./ts2.pdf"><p className={`${theme ? 'text-white' : 'text-black'}`}>- Learn TypeScript</p></a>
                   </div>
 
                   <div className='md:text-end md:pt-0 pt-5'>
@@ -502,7 +502,7 @@ export default function Home() {
 
                 </div>
 
-                <a href="https://publuu.com/flip-book/493281/1107445" target='_blank' className='pt-3 font-bold'>
+                <a href="./jaredResume.pdf" className='pt-3 font-bold'>
                   <div>
                     More information in my <span className={`${theme ? 'text-white' : 'text-black'}`}>resume.</span>
                   </div>
