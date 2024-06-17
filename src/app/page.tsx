@@ -88,16 +88,16 @@ export default function Home() {
             <nav className='py-20'>
               <ul className={`font-[20px] ${theme ? '' : 'text-black'}`}>
                 <a href="#about">
-                  <li className='active:text-white'>About</li>
+                  <li className='hover:text-white'>About</li>
                 </a>
                 <a href="#skills">
-                  <li className='active:text-white'>Skills</li>
+                  <li className='hover:text-white'>Skills</li>
                 </a>                
                 <a href="#projects">
-                  <li className='active:text-white'>Projects & Other</li>
+                  <li className='hover:text-white'>Projects & Other</li>
                 </a>
                 <a href="#certifs">
-                  <li className='active:text-white'>Certificates</li>
+                  <li className='hover:text-white'>Certificates</li>
                 </a>
 
               </ul>
@@ -129,7 +129,7 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/jared-ly-6b2b272b9/" target='_blank' aria-label='Read more about LinkedIn'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
               </a>
-              <a href="https://publuu.com/flip-book/493281/1107445" target='_blank' aria-label='Read more about Resume'>
+              <a href="./jaredResume.pdf" target='_blank' aria-label='Read more about Resume'>
                 <Image src={resume} alt="resume" width='24' />
               </a>
             </div>
@@ -502,7 +502,7 @@ export default function Home() {
 
                 </div>
 
-                <a href="./jaredResume.pdf" className='pt-3 font-bold'>
+                <a href="./jaredResume.pdf" target='blank_' className='pt-3 font-bold'>
                   <div>
                     More information in my <span className={`${theme ? 'text-white' : 'text-black'}`}>resume.</span>
                   </div>
