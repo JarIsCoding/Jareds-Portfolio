@@ -61,10 +61,10 @@ export default function Home() {
       {/* Radial Graident for spotlight */}
       <div className="absolute inset-0 z-10" style={{ background: `radial-gradient(circle at ${x}px ${y}px, rgba(${theme ? '29, 78, 216, 0.15' : '224, 212, 185, .7'}) 0%, transparent 80%)` }}></div>
       <div className='absolute top-3 right-3 z-30'>
-        <div className={`${theme ? 'block' : 'hidden'}`} onClick={() => { setTheme(false); console.log('switch to light') }}>
+        <div className={`${theme ? 'block' : 'hidden'} wiggle`} onClick={() => { setTheme(false); console.log('switch to light') }}>
           <Image src={moon} alt="moon" width='50' />
         </div>
-        <div className={`${theme ? 'hidden' : 'block'}`} onClick={() => { setTheme(true); console.log('switch to dark') }}>
+        <div className={`${theme ? 'hidden' : 'block'} wiggle`} onClick={() => { setTheme(true); console.log('switch to dark') }}>
           <Image src={sun} alt="sun" width='50' />
         </div>
       </div>
