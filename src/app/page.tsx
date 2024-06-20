@@ -56,7 +56,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`leading-relaxed antialiased selection:bg-teal-300 selection:text-teal-900 ${theme ? 'bg-slate-900 text-slate-400 ' : 'bg-[#FCF5E5] text-slate-500'}`}>
+    <div className={`leading-relaxed antialiased selection:bg-teal-300 selection:text-teal-900 ${theme ? 'themeDark text-slate-400 ' : 'themeLight text-slate-500'}`}>
 
       {/* Radial Graident for spotlight */}
       <div className="absolute inset-0 z-10" style={{ background: `radial-gradient(circle at ${x}px ${y}px, rgba(${theme ? '29, 78, 216, 0.15' : '224, 212, 185, .7'}) 0%, transparent 80%)` }}></div>

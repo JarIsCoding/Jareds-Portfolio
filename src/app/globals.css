@@ -103,11 +103,45 @@ body{
     }
 }
 
-.changeToLight{
-    animation: darkToLight 2s ease-in linear;
+.themeDark{
+    animation: themeChange .4s 1 ease-in normal;
+    background-color: rgb(15 23 42);
 }
 
-@keyframes darkToLight {
+@keyframes themeChange {
+    0%{
+        background-color: #FCF5E5;
+    }
+    100%{
+        background-color: rgb(15 23 42);
+    }
+}
+
+.themeLight{
+    animation: themeChange2 .4s 1 ease-in normal;
+    background-color: #FCF5E5;
+}
+
+@keyframes themeChange2 {
+    0%{
+        background-color: rgb(15 23 42);
+    }
+    100%{
+        background-color: #FCF5E5;
+    }
+}
+
+.changeToSun{
+    animation: imgSwap 1s 1 ease-in normal;
+    display: block;
+}
+
+.changeToMoon{
+    animation: imgSwap2 1s 1 ease-in normal;
+    display: block;
+}
+
+@keyframes imgSwap {
     0%{
         background-color: rgb(15 23 42);
     }
