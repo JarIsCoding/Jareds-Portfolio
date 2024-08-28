@@ -28,6 +28,7 @@ import notion from '@/app/assets/notion.png'
 import slack from '@/app/assets/slack.png'
 import vscode from '@/app/assets/vscode.png'
 import swipe from '@/app/assets/swipe.png'
+import seasons from '@/app/assets/SeasonsImg.png'
 
 export default function Home() {
 
@@ -60,6 +61,7 @@ export default function Home() {
 
       {/* Radial Graident for spotlight */}
       <div className="absolute inset-0 z-10" style={{ background: `radial-gradient(circle at ${x}px ${y}px, rgba(${theme ? '29, 78, 216, 0.15' : '224, 212, 185, .7'}) 0%, transparent 80%)` }}></div>
+
       <div className='absolute top-3 right-3 z-30'>
         <div className={`${theme ? 'block' : 'hidden'} wiggle`} onClick={() => { setTheme(false); console.log('switch to light') }}>
           <Image src={moon} alt="moon" width='50' />
@@ -92,7 +94,7 @@ export default function Home() {
                 </a>
                 <a href="#skills">
                   <li className='hover:text-white'>Skills</li>
-                </a>                
+                </a>
                 <a href="#projects">
                   <li className='hover:text-white'>Projects & Other</li>
                 </a>
@@ -117,7 +119,7 @@ export default function Home() {
                   Phone
                 </p>
                 <p>
-                (209) 800-4719
+                  (209) 800-4719
                 </p>
               </div>
             </div>
@@ -438,26 +440,26 @@ export default function Home() {
                 </div>
               </a>
 
-              <a href="https://jar-jen-steamymugcafe.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
+              <a href="https://seasons-dun.vercel.app/" target='_blank' className={`${theme ? 'rotateHover' : 'rotateHoverLight'}`}>
                 <div className='sm:flex sm:justify-evenly items-center py-4 px-2'>
                   <div className={`${theme ? 'bg-teal-400/30' : 'bg-[#E49070]/30'} p-2 rounded-md sm:w-1/3`}>
-                    <Image src={smc} alt="Steamy Mug Cafe" />
+                    <Image src={seasons} alt="Seasons" />
                   </div>
                   <div className='ps-2 sm:w-2/3'>
                     <p className={`${theme ? 'text-white' : 'text-black'}`}>
-                      Steamy Mug Cafe
+                      Seasons
                     </p>
                     <div>
-                      A website made for my friends and I, based on a coffee API. Designed in figma and created for fun. Still in Progress.
+                      A website initally to display smooth animations. May be my next portfolio! Keep checking for updates...
                     </div>
                     <div className='flex justify-start gap-3 py-3 overflow-x-auto scrollbar'>
-                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>JavaScript</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>NextJS</div>
                       <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>HTML</div>
                       <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>CSS</div>
-                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Api</div>
-                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Figma</div>
-                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>WIP</div>
-                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Bootstrap</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Tailwind</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Animated</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>Typescript</div>
+                      <div className={`flex items-center rounded-full ${theme ? 'bg-teal-400/10 text-teal-300' : 'bg-[#E49070]/20 text-[#C67657]'} px-3 py-1 text-xs font-medium leading-5`}>InProgress</div>
                     </div>
                   </div>
                 </div>
